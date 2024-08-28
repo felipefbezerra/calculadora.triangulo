@@ -1,47 +1,54 @@
-# Calculadora de Média de Alunos
+# Calculadora de Área de Triângulo
 
-Este projeto é uma aplicação simples em Python utilizando a biblioteca Tkinter para criar uma interface gráfica que permite calcular a média de notas de alunos.
+Este projeto é uma aplicação em Python que utiliza a biblioteca Tkinter para criar uma interface gráfica simples, onde o usuário pode calcular a área de um triângulo a partir da base e altura fornecidas.
 
 ## Funcionalidades
 
-- O usuário informa a quantidade de alunos (entre 2 e 7).
-- Para cada aluno, o usuário insere o nome e duas notas.
-- O programa calcula a média das notas de cada aluno e exibe um relatório com o nome do aluno e sua média.
+- Entrada de valores para a base e altura de um triângulo.
+- Cálculo automático da área do triângulo com base nos valores fornecidos.
+- Exibição do resultado diretamente na interface gráfica.
 
 ## Estrutura do Código
 
-- **Função `calcular_media(notas)`**: Recebe uma lista de duas notas e retorna a média delas.
-- **Classe `Aplicacao`**: Gerencia a interface gráfica e a lógica da aplicação.
-  - **`__init__(self, root)`**: Inicializa a interface, cria os widgets e define variáveis.
-  - **Método `iniciar(self)`**: Valida a quantidade de alunos inserida, cria entradas para nome e notas, e prepara a interface para a próxima etapa.
-  - **Método `calcular_medias(self)`**: Calcula a média das notas para cada aluno, valida as entradas e exibe um relatório com as médias calculadas.
+- **Função `calcular_area(base, altura)`**: Recebe os valores da base e altura do triângulo e retorna a área calculada.
+- **Função `calcular_e_mostrar()`**: Coleta os valores inseridos pelo usuário, chama a função de cálculo da área, e exibe o resultado na interface.
+
+## Interface Gráfica
+
+A interface gráfica é composta por:
+
+- **Labels**: Para identificar os campos de entrada de base e altura do triângulo.
+- **Entries**: Campos de entrada para o usuário inserir os valores da base e altura.
+- **Button**: Botão para calcular a área do triângulo.
+- **Label de Resultado**: Campo onde o resultado da área calculada é exibido.
 
 ## Uso
 
 1. Execute o código.
-2. Informe a quantidade de alunos (mínimo de 2 e máximo de 7).
-3. Preencha o nome e as notas para cada aluno.
-4. Clique em "Calcular Médias" para ver o relatório com as médias de cada aluno.
+2. Insira o valor da base do triângulo no primeiro campo.
+3. Insira o valor da altura do triângulo no segundo campo.
+4. Clique no botão "Calcular" para obter a área do triângulo.
+5. O resultado será exibido logo abaixo do botão de cálculo.
 
 ## Dependências
 
 - **Python 3.x**
-- **Tkinter**: A biblioteca Tkinter vem pré-instalada com a maioria das distribuições Python. Nenhuma instalação adicional é necessária.
+- **Tkinter**: A biblioteca Tkinter é necessária para a interface gráfica. Ela já vem pré-instalada com a maioria das distribuições Python.
 
 ## Exemplo de Execução
 
-1. Ao iniciar o programa, uma janela solicitará a quantidade de alunos.
-2. Após inserir a quantidade, campos para o nome e notas dos alunos serão exibidos.
-3. Ao finalizar a inserção dos dados, clique no botão "Calcular Médias" e o relatório será gerado com o nome dos alunos e suas respectivas médias.
+1. Ao iniciar o programa, uma janela será exibida com campos para inserir a base e a altura do triângulo.
+2. Após inserir os valores, clique no botão "Calcular".
+3. A área do triângulo será calculada e exibida na tela.
 
 ## Considerações
 
-- As notas devem ser valores numéricos entre 0.0 e 10.0.
-- Certifique-se de inserir corretamente os dados, pois o programa exibirá mensagens de erro em caso de entradas inválidas.
+- Os valores da base e altura devem ser números reais (decimais são permitidos).
+- Certifique-se de que os valores inseridos sejam válidos para evitar erros no cálculo.
 
 ## Como Executar
 
 Para executar o programa, basta rodar o arquivo Python em um ambiente que suporte Tkinter.
 
 ```bash
-python final.py ou final_janela.py
+python parcial.py ou parcial_janela.py
